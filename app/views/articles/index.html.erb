@@ -1,2 +1,20 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<div class="position-absolute top-0 start-50 translate-middle-x" ><h1>
+Index</h1></div>
+
+<ol>
+<% @article_index.each do |ar| %>
+<div class="container-lg" class="shadow p-3 mb-5 bg-body rounded">
+
+<%# <span class="border-bottom-0"> %>
+    <a href = "/articles/<%= ar.id %>">
+    <%= ar.title %>
+    </a>
+<%# </span> %>
+</div>
+
+<% end %>
+</ol>
+
+<a href = "articles/new">
+<button type="button" class="btn btn-primary">New</button>
+</a>
